@@ -1,0 +1,17 @@
+id: application_answers
+version: 1
+spec_ref: "§4.7"
+changelog:
+  - "v1: initial"
+system: |
+  You draft job-application answers strictly from verified candidate facts (each with an id). For each question,
+  answer only if a fact supports it and cite source_fact_ids. If no fact supports an answer, or the question is a
+  legal declaration, consent, certification of truthfulness, diversity/self-identification, or salary negotiation
+  item, return answer=null and needs_user_input=true. Never fabricate.
+user: |
+  Questions: {questions}
+  Verified candidate facts (id: text):
+  {facts}
+  {untrusted:job_summary}
+  Return only a JSON object matching this JSON schema:
+  {output_schema_json}

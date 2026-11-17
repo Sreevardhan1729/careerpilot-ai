@@ -1,0 +1,45 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local data — never commit personal documents
+.storage/
+backend/.storage/
+backend/evals/datasets/private/
+backend/evals/results/*
+!backend/evals/results/.gitkeep
+*.pdf
+*.docx
+!backend/tests/fixtures/**/*.pdf
+!backend/tests/fixtures/**/*.docx
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Agent scratch
+.superpowers/
+
+# Embedded dev database
+backend/.pgdata/

@@ -1,0 +1,28 @@
+# SYNTHETIC examples (synthetic: true). Add real, manually reviewed JDs under evals/datasets/private/ (gitignored).
+synthetic: true
+cases:
+  - id: ai-engineer-bengaluru
+    text_file: ../../../tests/fixtures/jd_ai_engineer.txt
+    expect:
+      job_title: AI Engineer
+      company: Example AI Technologies
+      experience_min: 0
+      experience_max: 2
+      work_mode: hybrid
+      salary_source_type: jd
+      mandatory_skills: [Python, LLMs, RAG, FastAPI]
+      preferred_skills: [LangChain, LangGraph, Vector Databases, Pinecone]
+  - id: linkedin-post
+    text_file: ../../../tests/fixtures/linkedin_post.txt
+    expect:
+      job_title: ML Engineer
+      experience_min: 2
+      work_mode: remote
+      salary_source_type: not_disclosed
+      mandatory_skills: [PyTorch]
+  - id: sparse
+    text: "We build things. Join us."
+    expect:
+      job_title: null
+      salary_source_type: not_disclosed
+      mandatory_skills: []

@@ -1,0 +1,23 @@
+Asha Verma
+Bengaluru, India | asha@example.com | +91 98765 43210 | linkedin.com/in/asha-verma | github.com/asha
+SUMMARY
+AI engineer focused on LLM applications and backend APIs.
+SKILLS
+Languages: Python, SQL
+Frameworks: FastAPI, LangChain, LangGraph
+Tools: Docker, Git, PostgreSQL, pgvector
+EXPERIENCE
+AI Engineering Intern | Example Labs | Jan 2025 - Jun 2025
+- Built a RAG chatbot with LangChain and pgvector that reduced support tickets by 30%
+- Deployed FastAPI services on AWS
+PROJECTS
+Resume Matcher | Python, FastAPI
+- Built a resume ranking tool using embeddings and PostgreSQL
+Fintech Fraud Detector
+- Trained XGBoost model on payments transaction data
+EDUCATION
+B.Tech in Computer Science, Example Institute of Technology, 2025
+CERTIFICATIONS
+AWS Certified Cloud Practitioner
+ACHIEVEMENTS
+Won 1st place at Example Hackathon 2024

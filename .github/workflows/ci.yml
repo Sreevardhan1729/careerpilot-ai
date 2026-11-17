@@ -1,0 +1,41 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions: { contents: read }
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: backend } }
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run ruff check app tests scripts alembic
+      # Tests start an embedded Postgres 16 + pgvector (pgserver) — no service container needed.
+      - run: uv run pytest -q
+      - run: uv export --no-dev --no-group local --no-hashes --frozen -o /tmp/req.txt && uvx pip-audit -r /tmp/req.txt --strict || echo "::warning::pip-audit reported issues"
+  frontend:
+    if: ${{ hashFiles('frontend/package.json') != '' }}
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: pnpm, cache-dependency-path: frontend/pnpm-lock.yaml }
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm exec tsc --noEmit
+      - run: pnpm test
+      - run: pnpm build
+      - name: No secrets in the client bundle
+        run: "! grep -rEl 'sb_secret_|nvapi-|service_role' .next/static || (echo 'secret-like string in bundle' && exit 1)"
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with: { fetch-depth: 0 }
+      - uses: gitleaks/gitleaks-action@v2
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }

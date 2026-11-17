@@ -1,0 +1,9 @@
+.venv
+.pgdata
+.storage
+.pytest_cache
+.ruff_cache
+__pycache__
+tests
+evals/results
+.env

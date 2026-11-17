@@ -1,0 +1,24 @@
+Example AI Technologies is hiring!
+Role: AI Engineer
+Location: Bengaluru, India (Hybrid)
+Experience: 0-2 years
+
+About us
+Example AI Technologies builds generative AI products and LLM tooling for enterprise teams.
+
+What you'll do
+- Build and deploy LLM applications using RAG pipelines
+- Design FastAPI services and APIs
+- Collaborate with product teams
+
+Requirements
+- Strong Python skills
+- Experience with LLMs, RAG and FastAPI
+- Bachelor's degree in Computer Science or related field
+
+Nice to have
+- LangChain or LangGraph
+- Experience with vector databases like Pinecone
+
+Compensation: ₹12 - 18 LPA
+Full-time. Apply by 30 November 2026 at https://example.com/careers/ai-engineer

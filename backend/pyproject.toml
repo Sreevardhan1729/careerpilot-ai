@@ -1,0 +1,70 @@
+[project]
+name = "careerpilot-backend"
+version = "0.1.0"
+description = "CareerPilot AI backend: FastAPI + LangGraph job intelligence"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.8",
+  "pydantic-settings>=2.4",
+  "email-validator>=2.2",
+  "sqlalchemy[asyncio]>=2.0.32",
+  "psycopg[binary,pool]>=3.2",
+  "alembic>=1.13",
+  "pgvector>=0.3",
+  "langgraph>=0.6",
+  "langgraph-checkpoint-postgres>=2.0",
+  "langchain-core>=0.3",
+  "langchain-nvidia-ai-endpoints>=0.3",
+  "httpx>=0.27",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.2",
+  "pymupdf>=1.24",
+  "python-docx>=1.1",
+  "rapidfuzz>=3.9",
+  "dateparser>=1.2",
+  "protego>=0.3",
+  "structlog>=24.4",
+  "pyjwt[crypto]>=2.9",
+  "cryptography>=43",
+  "python-multipart>=0.0.9",
+  "pyyaml>=6.0",
+  "feedparser>=6.0",
+]
+
+[dependency-groups]
+# Embedded Postgres 16 + pgvector for local dev/tests when DATABASE_URL is unset (not installed in production images).
+local = ["pgserver>=0.1.4"]
+dev = [
+  "pytest>=8.3",
+  "pytest-asyncio>=0.24",
+  "respx>=0.21",
+  "hypothesis>=6.112",
+  "ruff>=0.6",
+  "mypy>=1.11",
+]
+
+[tool.uv]
+package = false
+default-groups = ["dev", "local"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC"]
+ignore = ["E501", "B008", "UP047"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = false

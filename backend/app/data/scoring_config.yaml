@@ -1,0 +1,19 @@
+# Versioned scoring configuration (docs/AGENT_DESIGN.md §5.2). Every stored score records `version`.
+version: "2026-11-17.1"
+match_weights: {K: 0.35, P: 0.25, E_rel: 0.15, R: 0.15, D: 0.10}
+skill_credit: {strong: 1.0, listed_only: 0.6, related: 0.5, profile_only: 0.0, no_evidence: 0.0, confirmed_missing: 0.0}
+skill_mix: {mandatory: 0.75, preferred: 0.25}
+# cosine similarity → [0, 1] via clamp((x - lo) / (hi - lo)); calibrated per embedding provider.
+similarity_scale:
+  nvidia: {lo: 0.25, hi: 0.65}
+  hashing: {lo: 0.05, hi: 0.45}
+project: {tech_weight: 0.6, semantic_weight: 0.4, top_n: 2, overlap_denominator_cap: 6}
+experience_rel: {years_weight: 0.5, role_weight: 0.5, internship_factor: 0.5, unknown_requirement_score: 70, role_sim_threshold: 0.5}
+domain: {exact: 100, adjacent: 60, resume_unknown: 30, job_unknown: 50}
+job_weights: {M: 0.50, F: 0.20, E_elig: 0.15, L: 0.10, S: 0.05}
+freshness: {full_days: 1, zero_days: 30, unknown_cap: 70}
+eligibility: {unknown: 70, short_1y: 60, short_2y: 30, over_1y: 80, over_more: 50}
+location: {match: 100, same_country: 40, unknown: 50, other: 0}
+salary: {unknown: 50, meets_min: 100, straddles: 85}
+bands: {excellent: 85, strong: 70, moderate: 50}
+people_weights: {T: 0.35, D: 0.30, C: 0.20, S: 0.15}

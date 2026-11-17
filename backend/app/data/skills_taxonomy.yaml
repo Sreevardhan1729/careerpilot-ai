@@ -1,0 +1,217 @@
+# Skill taxonomy: canonical name | comma-separated aliases. Matching is case-insensitive with word boundaries.
+# `parents` collapses child skills under a parent for "related" credit (never double-counted).
+version: "2026-11-17.1"
+skills:
+  programming_languages:
+    - "Python | py, python3"
+    - "Java"
+    - "JavaScript | js, ecmascript"
+    - "TypeScript | ts"
+    - "Go | golang"
+    - "Rust"
+    - "C++ | cpp"
+    - "C"
+    - "C# | csharp, c sharp"
+    - "Kotlin"
+    - "Scala"
+    - "Ruby"
+    - "PHP"
+    - "Swift"
+    - "R | r language"
+    - "SQL"
+    - "Bash | shell scripting, shell"
+    - "Julia"
+  frameworks_libraries:
+    - "FastAPI | fast api"
+    - "Django"
+    - "Flask"
+    - "Spring Boot | spring"
+    - "Node.js | nodejs, node"
+    - "Express.js | express"
+    - "React | react.js, reactjs"
+    - "Next.js | nextjs"
+    - "Vue.js | vue, vuejs"
+    - "Angular"
+    - "Pydantic"
+    - "SQLAlchemy"
+    - "Celery"
+    - "gRPC"
+    - "GraphQL"
+    - "REST APIs | rest, restful apis, rest api, restful"
+    - "Tailwind CSS | tailwind"
+    - "NumPy | numpy"
+    - "Pandas"
+    - "Streamlit"
+    - "Gradio"
+  ai_ml:
+    - "Machine Learning | ml"
+    - "Deep Learning | dl"
+    - "Artificial Intelligence | ai"
+    - "PyTorch | torch"
+    - "TensorFlow | tf"
+    - "Keras"
+    - "scikit-learn | sklearn, scikit learn"
+    - "XGBoost"
+    - "LightGBM"
+    - "Computer Vision | cv"
+    - "Natural Language Processing | nlp"
+    - "Reinforcement Learning | rl"
+    - "MLOps | ml ops"
+    - "MLflow"
+    - "Weights & Biases | wandb, weights and biases"
+    - "ONNX"
+    - "OpenCV"
+    - "Model Deployment | model serving"
+    - "Feature Engineering"
+    - "Statistics | statistical modeling"
+    - "Time Series | time-series forecasting, forecasting"
+    - "Recommender Systems | recommendation systems"
+  llm_engineering:
+    - "LLMs | llm, large language models, large language model"
+    - "Generative AI | genai, gen ai"
+    - "RAG | retrieval augmented generation, retrieval-augmented generation"
+    - "LangChain | lang chain"
+    - "LangGraph | lang graph"
+    - "LlamaIndex | llama index, llama-index"
+    - "Prompt Engineering | prompting"
+    - "Fine-tuning | fine tuning, finetuning"
+    - "LoRA | qlora, peft"
+    - "Hugging Face | huggingface, hugging face transformers, transformers"
+    - "OpenAI API | openai"
+    - "AI Agents | agents, agentic ai, agentic workflows, multi-agent systems"
+    - "LLM Evaluation | llm evals, evals"
+    - "Embeddings | embedding models, text embeddings"
+    - "vLLM"
+    - "NVIDIA NIM | nim"
+    - "Guardrails"
+    - "Function Calling | tool calling, tool use"
+  retrieval_vector_db:
+    - "Vector Databases | vector database, vector db, vector stores, vector store"
+    - "pgvector"
+    - "Pinecone"
+    - "Weaviate"
+    - "Milvus"
+    - "Qdrant"
+    - "Chroma | chromadb"
+    - "FAISS"
+    - "Elasticsearch | elastic search"
+    - "OpenSearch"
+    - "Semantic Search | similarity search, vector search"
+    - "Hybrid Search | bm25"
+  databases:
+    - "PostgreSQL | postgres, postgre sql, psql"
+    - "MySQL"
+    - "MongoDB | mongo"
+    - "Redis"
+    - "SQLite"
+    - "Cassandra"
+    - "DynamoDB"
+    - "Supabase"
+    - "Neo4j | graph database"
+    - "Oracle Database | oracle"
+    - "SQL Server | mssql, microsoft sql server"
+  cloud:
+    - "AWS | amazon web services"
+    - "GCP | google cloud, google cloud platform"
+    - "Azure | microsoft azure"
+    - "AWS Lambda | lambda"
+    - "Amazon S3 | s3"
+    - "Amazon SageMaker | sagemaker"
+    - "Vertex AI"
+    - "Azure OpenAI"
+    - "Vercel"
+    - "Render"
+    - "Firebase"
+  devops_infra:
+    - "Docker | containers, containerization"
+    - "Kubernetes | k8s"
+    - "CI/CD | ci cd, continuous integration, continuous delivery"
+    - "GitHub Actions"
+    - "Terraform"
+    - "Linux"
+    - "Git | github, gitlab, version control"
+    - "Nginx"
+    - "Prometheus"
+    - "Grafana"
+    - "Observability | monitoring, logging"
+    - "Microservices | micro services"
+    - "Serverless"
+  data_engineering:
+    - "Apache Spark | spark, pyspark"
+    - "Apache Kafka | kafka"
+    - "Apache Airflow | airflow"
+    - "dbt"
+    - "ETL | elt, data pipelines, data pipeline"
+    - "Snowflake"
+    - "BigQuery"
+    - "Databricks"
+    - "Hadoop"
+    - "Data Warehousing | data warehouse"
+    - "Data Modeling | data modelling"
+  system_design:
+    - "System Design | distributed systems, scalable systems"
+    - "API Design"
+    - "Backend Engineering | backend development, backend"
+    - "Caching"
+    - "Message Queues | rabbitmq, sqs, pub/sub"
+    - "Concurrency | async programming, asyncio, multithreading"
+    - "Data Structures | data structures and algorithms, dsa, algorithms"
+    - "Object-Oriented Programming | oop, object oriented programming"
+    - "Design Patterns"
+    - "Testing | unit testing, pytest, test-driven development, tdd"
+    - "Security | application security, authentication, oauth"
+  domain_knowledge:
+    - "Fintech | financial services, payments, banking"
+    - "E-commerce | ecommerce, retail"
+    - "Healthcare | healthtech, health tech"
+    - "EdTech | education technology"
+    - "SaaS"
+    - "Developer Tools | devtools"
+    - "Cybersecurity"
+    - "Logistics | supply chain"
+    - "Adtech | advertising"
+    - "Gaming"
+  soft_skills:
+    - "Communication | communication skills, written communication, verbal communication"
+    - "Ownership | accountability"
+    - "Collaboration | teamwork, team player, cross-functional collaboration"
+    - "Problem Solving | problem-solving, analytical skills"
+    - "Leadership | mentoring, mentorship"
+    - "Adaptability | fast learner, quick learner, learning agility"
+    - "Time Management | prioritization"
+    - "Stakeholder Management"
+parents:
+  LangChain: [LangGraph]
+  LLMs: [RAG, Prompt Engineering, Fine-tuning, LangChain, LlamaIndex, AI Agents, LLM Evaluation, Function Calling]
+  Vector Databases: [pgvector, Pinecone, Weaviate, Milvus, Qdrant, Chroma, FAISS]
+  Machine Learning: [scikit-learn, XGBoost, LightGBM, Feature Engineering, Deep Learning]
+  Deep Learning: [PyTorch, TensorFlow, Keras]
+  AWS: [AWS Lambda, Amazon S3, Amazon SageMaker]
+  GCP: [Vertex AI, BigQuery]
+  Azure: [Azure OpenAI]
+  Docker: [Kubernetes]
+  CI/CD: [GitHub Actions]
+  Backend Engineering: [FastAPI, Django, Flask, Spring Boot, Node.js, Express.js]
+# Business domains for D (domain relevance); adjacency gives partial credit.
+domains:
+  ai_ml: [ai, artificial intelligence, machine learning, genai, generative ai, llm, ml, deep learning, nlp, computer vision]
+  fintech: [fintech, payments, banking, financial services, lending, insurance, insurtech, trading]
+  ecommerce: [e-commerce, ecommerce, retail, marketplace, d2c]
+  healthtech: [healthcare, healthtech, health tech, medical, pharma, biotech]
+  edtech: [edtech, education, learning platform]
+  saas: [saas, b2b software, enterprise software]
+  devtools: [developer tools, devtools, developer platform, infrastructure software]
+  cybersecurity: [cybersecurity, security, infosec]
+  logistics: [logistics, supply chain, mobility, delivery]
+  adtech: [adtech, advertising, marketing technology, martech]
+  gaming: [gaming, games]
+  data_platforms: [data platform, analytics, data infrastructure, big data]
+domain_adjacency:
+  ai_ml: [data_platforms, saas, devtools]
+  data_platforms: [ai_ml, saas]
+  saas: [devtools, ai_ml, data_platforms]
+  devtools: [saas, ai_ml]
+  fintech: [saas]
+  ecommerce: [logistics, adtech]
+  logistics: [ecommerce]
+  adtech: [ecommerce]
